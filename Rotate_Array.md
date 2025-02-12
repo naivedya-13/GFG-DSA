@@ -1,4 +1,27 @@
-//{ Driver Code Starts
+Rotate Array Problem
+Problem Overview
+Given an array arr[], rotate the array to the left (counter-clockwise direction) by d steps, where d is a positive integer. Perform the rotation in-place without using extra space.
+
+Problem Link
+Rotate Array by N Elements
+Approach
+Modulo Operation: If d > n (the length of the array), we first take d % n to avoid unnecessary full rotations.
+
+Reverse Algorithm: The main idea behind solving this problem efficiently is using the reverse algorithm, which works as follows:
+
+Reverse the first d elements of the array.
+Reverse the remaining n-d elements of the array.
+Reverse the entire array to get the desired rotation.
+Time Complexity: The time complexity of this approach is O(n) where n is the size of the array because we perform three reversals, each taking O(n) time.
+
+Space Complexity: The space complexity is O(1) since we are rotating the array in-place without using any extra space.
+
+Code Implementation
+Java Code
+java
+Copy
+Edit
+// Driver Code Starts
 import java.io.*;
 import java.util.*;
 
@@ -37,16 +60,12 @@ class GFG {
     }
 }
 
-// } Driver Code Ends
-
-
 // User function Template for Java
 
 class Solution {
     // Function to rotate an array by d elements in counter-clockwise direction.
     static void rotateArr(int arr[], int d) {
-        // add your code here
-         int n = arr.length;
+        int n = arr.length;
         d = d % n; // Handle cases where d > n
 
         // Step 1: Reverse first d elements
@@ -58,6 +77,7 @@ class Solution {
         // Step 3: Reverse entire array
         reverse(arr, 0, n - 1);
     }
+
     private static void reverse(int[] arr, int start, int end) {
         while (start < end) {
             int temp = arr[start];
@@ -68,3 +88,56 @@ class Solution {
         }
     }
 }
+Test Cases
+Example 1:
+Input:
+
+java
+Copy
+Edit
+arr[] = [1, 2, 3, 4, 5], d = 2
+Output:
+
+csharp
+Copy
+Edit
+[3, 4, 5, 1, 2]
+Explanation: After rotating the array by 2 elements, it becomes [3, 4, 5, 1, 2].
+
+Example 2:
+Input:
+
+java
+Copy
+Edit
+arr[] = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20], d = 3
+Output:
+
+csharp
+Copy
+Edit
+[8, 10, 12, 14, 16, 18, 20, 2, 4, 6]
+Explanation: After rotating the array by 3 elements, it becomes [8, 10, 12, 14, 16, 18, 20, 2, 4, 6].
+
+Example 3:
+Input:
+
+java
+Copy
+Edit
+arr[] = [7, 3, 9, 1], d = 9
+Output:
+
+csharp
+Copy
+Edit
+[3, 9, 1, 7]
+Explanation: After rotating the array 9 times, it becomes [3, 9, 1, 7].
+
+Constraints
+1 <= arr.size(), d <= 10^5
+0 <= arr[i] <= 10^5
+Key Points
+This approach uses constant space and handles large arrays effectively within O(n) time.
+The reverse technique ensures that rotations are done efficiently, avoiding extra space for another array or list.
+Feel free to use this approach to rotate arrays efficiently in your future problems! 🚀
