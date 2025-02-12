@@ -11,7 +11,7 @@ Given an array `arr[]` of integers, find the **first non-repeating element** in 
 - The array consists of **only positive and negative integers** and **not zero**.
 
 ## Problem Link
-[Non-Repeating Element](https://www.geeksforgeeks.org/find-first-non-repeating-element-in-an-array/)
+[Non-Repeating Element](https://www.geeksforgeeks.org/problems/non-repeating-element3958/1)
 
 ---
 
