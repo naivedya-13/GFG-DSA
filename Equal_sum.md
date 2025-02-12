@@ -8,6 +8,9 @@
 
 Given an array `arr[]`, determine if there exists an element such that the sum of the elements on its left is equal to the sum of the elements on its right. If there are no elements to the left/right, then the sum is considered to be zero.
 
+## Problem Link
+[Non-Repeating Element](https://www.geeksforgeeks.org/problems/equal-sum0810/1)
+
 ### Example:
 
 **Input 1:**
