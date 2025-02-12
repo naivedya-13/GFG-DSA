@@ -1,26 +1,40 @@
-Rotate Array Problem
-Problem Overview
-Given an array arr[], rotate the array to the left (counter-clockwise direction) by d steps, where d is a positive integer. Perform the rotation in-place without using extra space.
+Here's a corrected version of the README for the Rotate Array problem:
 
-Problem Link
-Rotate Array by N Elements
-Approach
-Modulo Operation: If d > n (the length of the array), we first take d % n to avoid unnecessary full rotations.
+---
 
-Reverse Algorithm: The main idea behind solving this problem efficiently is using the reverse algorithm, which works as follows:
+# Rotate Array Problem
 
-Reverse the first d elements of the array.
-Reverse the remaining n-d elements of the array.
-Reverse the entire array to get the desired rotation.
-Time Complexity: The time complexity of this approach is O(n) where n is the size of the array because we perform three reversals, each taking O(n) time.
+## Problem Overview
+Given an array `arr[]`, rotate the array to the left (counter-clockwise direction) by `d` steps, where `d` is a positive integer. Perform the rotation **in-place** without using extra space.
 
-Space Complexity: The space complexity is O(1) since we are rotating the array in-place without using any extra space.
+## Problem Link
+[Rotate Array by N Elements](https://www.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1)
 
-Code Implementation
-Java Code
-java
-Copy
-Edit
+## Approach
+
+### Modulo Operation
+If `d > n` (the length of the array), we first take `d % n` to avoid unnecessary full rotations.
+
+### Reverse Algorithm
+The main idea behind solving this problem efficiently is using the **reverse algorithm**, which works as follows:
+
+1. Reverse the first `d` elements of the array.
+2. Reverse the remaining `n - d` elements of the array.
+3. Reverse the entire array to get the desired rotation.
+
+### Time Complexity
+- **Time Complexity**: O(n) where `n` is the size of the array, because we perform three reversals, each taking O(n) time.
+
+### Space Complexity
+- **Space Complexity**: O(1) since we are rotating the array in-place without using any extra space.
+
+---
+
+## Code Implementation
+
+### Java Code
+
+```java
 // Driver Code Starts
 import java.io.*;
 import java.util.*;
@@ -88,56 +102,65 @@ class Solution {
         }
     }
 }
-Test Cases
-Example 1:
-Input:
+```
 
-java
-Copy
-Edit
+---
+
+## Test Cases
+
+### Example 1
+**Input:**
+```
 arr[] = [1, 2, 3, 4, 5], d = 2
-Output:
+```
 
-csharp
-Copy
-Edit
+**Output:**
+```
 [3, 4, 5, 1, 2]
-Explanation: After rotating the array by 2 elements, it becomes [3, 4, 5, 1, 2].
+```
+**Explanation**: After rotating the array by 2 elements, it becomes `[3, 4, 5, 1, 2]`.
 
-Example 2:
-Input:
+---
 
-java
-Copy
-Edit
+### Example 2
+**Input:**
+```
 arr[] = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20], d = 3
-Output:
+```
 
-csharp
-Copy
-Edit
+**Output:**
+```
 [8, 10, 12, 14, 16, 18, 20, 2, 4, 6]
-Explanation: After rotating the array by 3 elements, it becomes [8, 10, 12, 14, 16, 18, 20, 2, 4, 6].
+```
+**Explanation**: After rotating the array by 3 elements, it becomes `[8, 10, 12, 14, 16, 18, 20, 2, 4, 6]`.
 
-Example 3:
-Input:
+---
 
-java
-Copy
-Edit
+### Example 3
+**Input:**
+```
 arr[] = [7, 3, 9, 1], d = 9
-Output:
+```
 
-csharp
-Copy
-Edit
+**Output:**
+```
 [3, 9, 1, 7]
-Explanation: After rotating the array 9 times, it becomes [3, 9, 1, 7].
+```
+**Explanation**: After rotating the array 9 times, it becomes `[3, 9, 1, 7]`.
 
-Constraints
-1 <= arr.size(), d <= 10^5
-0 <= arr[i] <= 10^5
-Key Points
-This approach uses constant space and handles large arrays effectively within O(n) time.
-The reverse technique ensures that rotations are done efficiently, avoiding extra space for another array or list.
-Feel free to use this approach to rotate arrays efficiently in your future problems! 🚀
+---
+
+## Constraints
+- `1 <= arr.size(), d <= 10^5`
+- `0 <= arr[i] <= 10^5`
+
+---
+
+## Key Points
+- This approach uses **constant space** and handles large arrays effectively within **O(n)** time.
+- The **reverse technique** ensures that rotations are done efficiently, avoiding extra space for another array or list.
+- Feel free to use this approach to rotate arrays efficiently in your future problems! 🚀
+
+--- 
+
+This should help present the solution clearly and avoid overflow issues in the README file.
