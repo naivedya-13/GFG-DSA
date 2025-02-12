@@ -1,4 +1,4 @@
-Here's a corrected version of the README for the Rotate Array problem:
+
 
 ---
 
@@ -163,4 +163,3 @@ arr[] = [7, 3, 9, 1], d = 9
 
 --- 
 
-This should help present the solution clearly and avoid overflow issues in the README file.
